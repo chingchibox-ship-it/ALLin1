@@ -1,0 +1,82 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          DEFAULT: '#2563eb',
+        },
+        accent: {
+          50: '#ecfdf5',
+          100: '#d1fae5',
+          200: '#a7f3d0',
+          300: '#6ee7b7',
+          400: '#34d399',
+          500: '#10b981',
+          600: '#059669',
+          700: '#047857',
+          800: '#065f46',
+          900: '#064e3b',
+          DEFAULT: '#10b981',
+        },
+        ink: '#111827',
+        surface: '#FFFFFF',
+        canvas: '#F8FAFC',
+        line: '#E5E7EB',
+        // Dark mode surfaces
+        dark: {
+          bg: '#0f1117',
+          surface: '#1a1d27',
+          card: '#22263a',
+          border: '#2d3148',
+          text: '#e2e8f0',
+          muted: '#8892a4',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
+      },
+      boxShadow: {
+        card: '0 1px 2px 0 rgb(17 24 39 / 0.04), 0 1px 3px 0 rgb(17 24 39 / 0.06)',
+        'card-hover': '0 8px 24px -6px rgb(37 99 235 / 0.18), 0 2px 6px 0 rgb(17 24 39 / 0.06)',
+        glow: '0 10px 40px -10px rgb(37 99 235 / 0.35)',
+        'dark-card': '0 2px 8px 0 rgb(0 0 0 / 0.4)',
+        'dark-glow': '0 10px 40px -10px rgb(37 99 235 / 0.5)',
+      },
+      borderRadius: {
+        xl: '0.875rem',
+        '2xl': '1.25rem',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.3s ease-out',
+        'slide-up': 'slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
+        'slide-down': 'slideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
+        'scale-in': 'scaleIn 0.2s ease-out',
+        'shimmer': 'shimmer 2s linear infinite',
+        'bounce-subtle': 'bounceSubtle 0.6s ease-out',
+      },
+      keyframes: {
+        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+        slideUp: { '0%': { opacity: '0', transform: 'translateY(10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+        slideDown: { '0%': { opacity: '0', transform: 'translateY(-10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+        scaleIn: { '0%': { opacity: '0', transform: 'scale(0.96)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
+        shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+        bounceSubtle: { '0%': { transform: 'scale(0.9)' }, '60%': { transform: 'scale(1.05)' }, '100%': { transform: 'scale(1)' } },
+      },
+    },
+  },
+  plugins: [],
+};
