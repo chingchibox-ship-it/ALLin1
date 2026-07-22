@@ -1,17 +1,17 @@
 import { useState } from 'react';
-import { AuthProvider } from './auth/AuthContext';
-import { ThemeProvider } from './context/ThemeContext';
-import { ToastProvider } from './context/ToastContext';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { AuthModal } from './components/AuthModal';
-import { Home } from './pages/Home';
-import { CategoryPage } from './pages/CategoryPage';
-import { SearchPage } from './pages/SearchPage';
-import { ProfilePage } from './pages/ProfilePage';
-import { useRouter } from './lib/router';
-import { TOOL_MAP } from './lib/registry';
-import { TOOL_COMPONENTS } from './lib/toolComponents';
+import { AuthProvider } from './AuthContext';
+import { ThemeProvider } from './ThemeContext';
+import { ToastProvider } from './ToastContext';
+import { Header } from './Header';
+import { Footer } from './Footer';
+import { AuthModal } from './AuthModal';
+import { Home } from './Home';
+import { CategoryPage } from './CategoryPage';
+import { SearchPage } from './SearchPage';
+import { ProfilePage } from './ProfilePage';
+import { useRouter } from './router';
+import { TOOL_MAP } from './registry';
+import { TOOL_COMPONENTS } from './toolComponents';
 
 function AppShell() {
   const { route } = useRouter();
